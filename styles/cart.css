@@ -1,0 +1,19 @@
+.cart-text {
+    text-align: center;
+}
+
+.cart-table {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 1rem;
+}

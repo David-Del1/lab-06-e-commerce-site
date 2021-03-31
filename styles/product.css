@@ -1,0 +1,41 @@
+/* Product page CSS */
+
+li {
+    margin: 1rem;
+}
+
+.cephalopod-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cephalopod {
+    background: lightblue;
+    padding: 1rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cephalopod h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cephalopod h3 {
+    font-size: 1.2rem;
+}
+
+.cephalopod .description {
+    margin-top: 1rem;
+}
+
+.cephalopod .price {
+    font-weight: 600;
+}
+
+.cephalopod img {
+    width: 100%;
+    
+}
