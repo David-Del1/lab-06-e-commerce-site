@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
 import { cephalopods } from '../products.js';
-import { calcItemTotal, createCephalopodLi, findById } from '../utils.js';
+import { calcItemTotal, createCephalopodLi, createTableRow, findById } from '../utils.js';
 const test = QUnit.test;
 
 test('It should take in a cephalopod object and return an li element', (expect) => {
@@ -97,5 +97,41 @@ test('function should take in two numbers and multiply them, returning the total
     //Expect
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
+});
+
+// createTableRow test
+test('', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const cartTestItem = {
+        id: 1,
+        quantity: 4
+    };
+
+    const cephalopodTestItem = {
+        id: 1,
+        name: 'Becky',
+        image: '../assets/francis-nie-DcitvRh5n18-unsplash.jpg',
+        description: 'Becky is a cuttlefish (or cuttles for short). Cuttlefish range between 6 - 10 inches in length and live about 2 years. Their diet consists mainly of crabs, shrimp, and fish. They\'re considered one of the most intelligent invertebrates on earth!',
+        category: 'Cuttlefish',
+        price: '25'
+    };
+
+    let expected = '<tr><td>Becky</td><td>4</td><td>$100.00</td></tr>';
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    let actual = createTableRow(cartTestItem, cephalopodTestItem);
+
+    // findById array
+
+    
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual.outerHTML, expected);
 });
 

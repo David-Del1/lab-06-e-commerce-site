@@ -49,3 +49,22 @@ export function calcItemTotal(quantity, price) {
     total += quantity * price;
     return total;
 }
+
+export function createTableRow(cartItem, someCephalopod) {
+    const tr = document.createElement('tr');
+    const tdName = document.createElement('td');
+    const tdQuantity = document.createElement('td');
+    const tdPrice = document.createElement('td');
+
+    tdName.textContent = someCephalopod.name;
+    tdQuantity.textContent = cartItem.quantity;
+    const totalPrice = calcItemTotal(cartItem.quantity, someCephalopod.price);
+
+    const totalAsUSD = `$${totalPrice}.00`;
+
+    tdPrice.textContent = totalAsUSD;
+
+    tr.append(tdName, tdQuantity, tdPrice);
+
+    return tr;
+}
