@@ -16,13 +16,14 @@ export function createCephalopodLi(cephalopods) {
 
     const cPrice = document.createElement('p');
     cPrice.classList.add('price');
-    cPrice.textContent = cephalopods.price;
+    cPrice.textContent = `Price: $${cephalopods.price}`;
 
     const image = document.createElement('img');
     image.src = cephalopods.image;
+    image.alt = cephalopods.category;
 
     const button = document.createElement('button');
-
+    button.classList.add('add-to-cart');
     button.textContent = 'Add to Cart';
 
     li.append(cName, cType, image, cDescription, cPrice, button);
