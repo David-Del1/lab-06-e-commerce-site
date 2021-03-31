@@ -30,3 +30,22 @@ export function createCephalopodLi(cephalopods) {
 
     return li;
 }
+
+// Shopping cart function
+
+export function findById(array, id) {
+    for (let item of array) {
+        if (item.id === id) {
+            return item;
+        }
+        //else return null;
+    }
+
+}
+
+// calculate item total function
+export function calcItemTotal(quantity, price) {
+    let total = 0;
+    total += quantity * price;
+    return total;
+}
