@@ -1,1 +1,15 @@
 /* add home page styles here */
+
+.welcome {
+    text-align: center;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    text-align: center;
+}
+

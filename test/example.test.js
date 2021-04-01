@@ -1,6 +1,5 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { cephalopods } from '../products.js';
 import { calcItemTotal, createCephalopodLi, createTableRow, findById } from '../utils.js';
 const test = QUnit.test;
 
@@ -81,7 +80,7 @@ test('function should take an id and return that item', (expect) => {
 test('function should take in two numbers and multiply them, returning the total.', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    let expected = 12
+    let expected = 12;
     
     //Act 
     // Call the function you're testing and set the result to a const

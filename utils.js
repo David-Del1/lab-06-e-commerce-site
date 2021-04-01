@@ -38,7 +38,7 @@ export function findById(array, id) {
         if (item.id === id) {
             return item;
         }
-        //else return null;
+        else return null;
     }
 
 }
@@ -68,3 +68,10 @@ export function createTableRow(cartItem, someCephalopod) {
 
     return tr;
 }
+
+// export function createTotalRow(cartArray, cephalopodArray) {
+
+//     for (let someCartItem of cartArray) {
+
+//     }
+// }
