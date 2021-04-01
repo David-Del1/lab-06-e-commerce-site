@@ -1,7 +1,7 @@
 import { cephalopods } from '../products.js';
 import { createCephalopodLi } from '../utils.js';
 
-console.log(cephalopods);
+//console.log(cephalopods);
 
 const ul = document.querySelector('.cephalopod-list');
 

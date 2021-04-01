@@ -38,7 +38,7 @@ export function findById(array, id) {
         if (item.id === id) {
             return item;
         }
-        else return null;
+        // else return null;
     }
 
 }
@@ -55,7 +55,6 @@ export function createTableRow(cartItem, someCephalopod) {
     const tdName = document.createElement('td');
     const tdQuantity = document.createElement('td');
     const tdPrice = document.createElement('td');
-
     tdName.textContent = someCephalopod.name;
     tdQuantity.textContent = cartItem.quantity;
     const totalPrice = calcItemTotal(cartItem.quantity, someCephalopod.price);
