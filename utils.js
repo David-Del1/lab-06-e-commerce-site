@@ -1,3 +1,5 @@
+import { addItemToCart } from './local-storage-utils.js';
+
 export function createCephalopodLi(cephalopods) {
     const li = document.createElement('li');
 
@@ -25,6 +27,9 @@ export function createCephalopodLi(cephalopods) {
     const button = document.createElement('button');
     button.classList.add('add-to-cart');
     button.textContent = 'Add to Cart';
+    button.addEventListener('click', () => {
+        addItemToCart(cephalopods.id);
+    });
 
     li.append(cName, cType, image, cDescription, cPrice, button);
 
@@ -38,7 +43,6 @@ export function findById(array, id) {
         if (item.id === id) {
             return item;
         }
-        // else return null;
     }
 
 }
@@ -68,9 +72,30 @@ export function createTableRow(cartItem, someCephalopod) {
     return tr;
 }
 
-// export function createTotalRow(cartArray, cephalopodArray) {
+export function createTotalRow(cartArray, cephalopodArray) {
+    let sum = 0;
 
-//     for (let someCartItem of cartArray) {
+    for (let someCartItem of cartArray) {
+        
+       
+        const matchingCephalopod = findById(cephalopodArray, someCartItem.id);
 
-//     }
-// }
+        const lineItem = matchingCephalopod.price * someCartItem.quantity;
+
+        sum = sum + lineItem;
+
+    }
+    const tr = document.createElement('tr');
+
+    const td1 = document.createElement('td');
+    const td2 = document.createElement('td');
+    const td3 = document.createElement('td');
+
+    td2.textContent = 'Total:';
+
+    td3.textContent = `$${sum}.00`;
+
+    tr.append(td1, td2, td3);
+
+    return tr;
+}
